@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<classPathEntry location="D:\chomeInstall\mysql-connector-java-8.0.30.jar"/>
+	<context id="DB2Tables" targetRuntime="MyBatis3">
+		<commentGenerator >
+			<!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+			<property name="suppressAllComments" value="false" />
+			<property name="suppressDate" value="false" />
+			<!-- 是否添加数据表中字段的注释 true：是 ： false:否 -->
+			<property name="addRemarkComments" value="true" />
+		</commentGenerator>
+		<!--数据库连接的信息：驱动类、连接地址、用户名、密码 -->
+		<!--useInformationSchema 实体类上添加数据表的注释 -->
+		<jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+
+						connectionURL="jdbc:mysql://xxx:3306/cloudb?useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=CONVERT_TO_NULL&amp;serverTimezone=Asia/Shanghai&amp;useSSL=false&amp;nullCatalogMeansCurrent=true"
+						userId="xxx" password="xx">
+			<property name="useInformationSchema" value="true" />
+		</jdbcConnection>
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<!-- 生成模型的包名和位置 -->
+		<javaModelGenerator targetPackage="com.lh.entity"
+							targetProject="F:\JavaHigherOrderProject\MyCommentGenerator\MyCommentGenerator\src\main\java\com\lh">
+			<!-- 是否允许子包 -->
+			<property name="enableSubPackages" value="false" />
+			<!-- 是否清理从数据库中查询出的字符串左右两边的空白字符 -->
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+		<!-- 生成的映射文件包名和位置 -->
+		<sqlMapGenerator targetPackage="mapping"
+						 targetProject="F:\JavaHigherOrderProject\MyCommentGenerator\MyCommentGenerator\src\main\resources">
+			<property name="enableSubPackages" value="false" />
+		</sqlMapGenerator>
+		<!-- 生成DAO的包名和位置 -->
+		<javaClientGenerator type="XMLMAPPER"
+							 targetPackage="com.lh.dao" targetProject="F:\JavaHigherOrderProject\MyCommentGenerator\MyCommentGenerator\src\main\java\com\lh">
+			<property name="enableSubPackages" value="false" />
+		</javaClientGenerator>
+		<!--<table tableName="user" domainObjectName="User"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   enableDeleteByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false">
+		</table>-->
+
+		<table tableName="activity_course" domainObjectName="ActivityCourse"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   enableDeleteByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false">
+		</table>
+
+		<table tableName="course" domainObjectName="Course"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   enableDeleteByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false">
+		</table>
+
+		<table tableName="course_comment" domainObjectName="CourseComment"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   enableDeleteByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false">
+		</table>
+
+		<table tableName="course_comment_favorite_record" domainObjectName="CourseCommentFavoriteRecord"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   enableDeleteByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false">
+		</table>
+
+		<table tableName="course_lesson" domainObjectName="CourseLesson"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   enableDeleteByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false">
+		</table>
+
+		<table tableName="course_media" domainObjectName="CourseMedia"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   enableDeleteByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false">
+		</table>
+
+		<table tableName="course_play_history" domainObjectName="CoursePlayHistory"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   enableDeleteByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false">
+		</table>
+		<table tableName="course_section" domainObjectName="CourseSection"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   enableDeleteByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false">
+		</table>
+		<table tableName="pay_order" domainObjectName="PayOrder"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   enableDeleteByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false">
+		</table>
+		<table tableName="pay_order_record" domainObjectName="PayOrderRecord"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   enableDeleteByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false">
+		</table>
+		<table tableName="promotion_ad" domainObjectName="PromotionAd"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   enableDeleteByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false">
+		</table>
+		<table tableName="promotion_space" domainObjectName="PromotionSpace"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   enableDeleteByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false">
+		</table>
+
+		<table tableName="teacher" domainObjectName="Teacher"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   enableDeleteByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false">
+		</table>
+		<table tableName="user_course_order" domainObjectName="UserCourseOrder"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   enableDeleteByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false">
+		</table>
+
+	</context>
+</generatorConfiguration>
